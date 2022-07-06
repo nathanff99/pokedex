@@ -1,0 +1,82 @@
+@import "../_variables";
+.pokemon {
+    border-radius: 8px;
+    height: 100px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    @media screen and (min-width: $min-desktop) {
+        margin-top: 80px;
+    }
+    .header {
+        height: 25px;
+        @media screen and (min-width: $min-desktop) {
+            text-align: right;
+        }
+        span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+            position: relative;
+            top: 1px;
+            left: 9px;
+            @media screen and (min-width: $min-desktop) {
+                top: 4px;
+                left: inherit;
+                right: 5px;
+            }
+        }
+    }
+    .content {
+        position: relative;
+        background-color: #fff;
+        height: 65px;
+        display: flex;
+        .name {
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            @media screen and (min-width: $min-desktop) {
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translateY(-50%) translateX(50%);
+            }
+        }
+        .types {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 32%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-row-gap: 10px;
+            @media screen and (min-width: $min-desktop) {
+                right: inherit;
+                left: 10px;
+            }
+            &__icon {
+                width: 18px;
+                height: 16.16px;
+            }
+        }
+        .image {
+            width: 100px;
+            height: 100px;
+            background-size: 100% !important;
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            @media screen and (min-width: $min-desktop) {
+                left: 0;
+                margin: 0 auto;
+                bottom: inherit;
+                top: -85px;
+            }
+        }
+    }
+}

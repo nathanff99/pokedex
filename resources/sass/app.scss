@@ -1,0 +1,60 @@
+// Variables
+@import 'variables';
+@import 'support';
+@import 'components/menu';
+@import 'components/banner';
+body {
+    font-family: $font-family;
+    margin: 0;
+    color: #fff;
+}
+
+#app {
+    margin: 0 20px;
+    &.no-margin {
+        margin: 0px;
+    }
+}
+
+.app__background {
+    background-image: url(/images/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    &.background2 {
+        background-image: url(/images/background2.webp) !important;
+        background-repeat: repeat !important;
+        background-size: auto !important;
+    }
+    &:not(.background2):before {
+        content: "";
+        background-color: rgba(44, 44, 45, 0.9);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+::placeholder {
+    font-family: $font-family;
+    color: #CCC;
+    opacity: 1;
+}
+
+ :-ms-input-placeholder {
+    font-family: $font-family;
+    color: #CCC;
+}
+
+ ::-ms-input-placeholder {
+    font-family: $font-family;
+    color: #CCC;
+}

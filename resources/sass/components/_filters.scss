@@ -1,0 +1,14 @@
+@import "../_variables";
+.filters {
+    margin-top: 23px;
+    margin-bottom: 29px;
+    .input-name {
+        margin-bottom: 20px;
+        @media screen and (min-width: $min-desktop) {
+            margin-bottom: 0;
+        }
+    }
+    .select-type option {
+        text-transform: capitalize;
+    }
+}
